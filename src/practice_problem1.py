@@ -476,9 +476,8 @@ class Box(object):
         #    DIFFICULTY:      4
         #    TIME ESTIMATE:   5 minutes.
         # --------------------------------------------------------------
-        self.volume += other_box.volume
-        self.append_string(other_box.contents)
-        return self
+        return Box(self.contents + other_box.contents, self.volume + other_box.volume)
+
 
 ########################################################################
 # The TEST functions for the  Box  class begin here.
